@@ -1,5 +1,5 @@
 # MLX90640
-Mongoose driver for the MLX90640 IR Array device.
+Mongoose OS driver for the MLX90640 IR Array device.
 
 ## Introduction
 
