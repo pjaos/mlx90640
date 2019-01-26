@@ -1,0 +1,25 @@
+author: Paul Austen <pausten.os@gmail.com>
+type: lib
+description: MLX90640 Infrared Thermal Sensor
+version: 1.0
+platforms: [ esp8266, esp32 ]
+
+sources:
+  - src
+includes:
+  - include
+libs:
+  - origin: https://github.com/mongoose-os-libs/i2c
+
+config_schema:
+  - ["mlx90640", "o", {title: "MLX90640 Infrared Thermal Sensor"}]
+  - ["mlx90640.i2c_addr", "i", 0x33,  {title: "The I2C bus address for the mlx90640 device."}]
+  - ["mlx90640.fps", "i", 8,  {title: "The frames per second that the mlx90640 device will be configured for."}]
+  - ["mlx90640.adc_bits", "i", 18,  {title: "The ADC bits to select (16 - 19, default = 18)."}]
+
+tags:
+  - c
+  - hw
+  - docs:drivers:MLX90640
+
+manifest_version: 2017-05-18
