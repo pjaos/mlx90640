@@ -27,8 +27,8 @@ mos.yml file.
 
 #### mos.yml
 
-The driver uses the Mongoose native i2c bus driver. The SDA and SCL pins must be 
-configured as detailed in the schema below. The i2C bus speed should be set
+The driver uses the Mongoose native I2C bus driver. The SDA and SCL pins must be 
+configured as detailed in the schema below. The I2C bus speed should be set
 to 400 kbps as shown below as the ESP32 does not currently support fast 
 mode (1 Mbps) although the mlx90640 device does.
 
