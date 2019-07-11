@@ -8,7 +8,7 @@ without contact. The interface to the device is via an I2C interface.
 
 ### API
 
-This driver attempts to provide a simple interface to the IR device via
+This driver provides a simple interface to the IR device via
 the I2C interface. After initialisation of the device the getMLX90640FramePtr()
 function can be called. This returns a pointer to 768 (32x24) float values.
 Each value contains the temperature in degrees Celsius.  
@@ -27,9 +27,10 @@ mos.yml file.
 
 #### mos.yml
 
-The driver uses the Mongoose native SPI driver. It is configured by setting
-up the `MOSI`, `MISO`, `SCLK` pins and assigning one of the three
-available `CS` positions, in this example we use `CS1`:
+The driver uses the Mongoose native i2c bus. The SDA and SCL pins must be 
+configured as detailed in the schema below. The i2C bus speed should be set
+to 400 kbps as shown below as the ESP32 does not currently support fast 
+mode (1 Mbps) although the mlx90640 device does.
 
 ```
 config_schema:
